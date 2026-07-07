@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://solardiyproject.com/sitemap-index.xml

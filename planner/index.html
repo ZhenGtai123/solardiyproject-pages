@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#071013"><title>Solar Project Planner | Solar DIY Project</title><meta name="description" content="Plan a small solar project with loads, battery size, panel watts, budget range, and starter parts."><link rel="canonical" href="https://solardiyproject.com/planner/"><meta property="og:type" content="website"><meta property="og:title" content="Solar Project Planner | Solar DIY Project"><meta property="og:description" content="Plan a small solar project with loads, battery size, panel watts, budget range, and starter parts."><meta property="og:url" content="https://solardiyproject.com/planner/"><meta property="og:image" content="https://solardiyproject.com/assets/solar-cabin-power-wall.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Solar Project Planner | Solar DIY Project"><meta name="twitter:description" content="Plan a small solar project with loads, battery size, panel watts, budget range, and starter parts."><meta name="twitter:image" content="https://solardiyproject.com/assets/solar-cabin-power-wall.webp"><script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Solar DIY Project","url":"https://solardiyproject.com","description":"Practical solar DIY project guides, planning calculators, wiring explainers, and safety-first checklists for small off-grid systems.","inLanguage":"en","publisher":{"@type":"Organization","name":"Solar DIY Project","url":"https://solardiyproject.com"}}</script><link rel="stylesheet" href="/_astro/BaseLayout.DjHNQQ96.css"></head><body class="theme-solar"><div class="ambient-layer" aria-hidden="true"></div><div class="site-shell"><header class="site-header"><div class="container nav-bar"><a class="brand" href="/" aria-label="Solar DIY Project home"><span class="brand-mark" aria-hidden="true"></span><span>Solar DIY Project</span></a><nav class="nav-links" aria-label="Primary navigation"><a href="/articles/">Guides</a><a href="/planner/">Planner</a><a href="/tools/battery-runtime-calculator/">Calculators</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav><a class="header-action" href="/planner/"><span>Planner</span><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div></header><main><section class="section"><div class="container"><header class="prose-header"><p class="eyebrow">Project workspace</p><h1>Solar Project Planner</h1><p>Plan a small solar project with loads, battery size, panel watts, budget range, and starter parts.</p></header><section class="visual-showcase" aria-label="Solar project visuals"><div class="visual-copy"><p class="eyebrow">Project map</p><h2>See the build before the parts list.</h2><p>The planner works better when the physical pieces stay visible: panels, battery storage, and wiring all shape the final parts list.</p></div><div class="visual-gallery"><figure class="visual-main"><img src="/assets/solar-cabin-power-wall.webp" alt="A cabin solar backup power wall with batteries and inverter equipment." loading="eager"><figcaption><span>Backup wall</span><strong>Plan batteries, inverter gear, disconnects, and reserve before mounting hardware.</strong></figcaption></figure><div class="visual-thumbs"><figure class="visual-thumb"><img src="/assets/solar-rv-wiring-workbench.webp" alt="A clean RV solar wiring workbench with charge controller, fuses, and cable routes." loading="lazy"><figcaption><span>RV wiring</span><strong>Keep cable routes, fuses, and controller current visible while sizing the system.</strong></figcaption></figure><figure class="visual-thumb"><img src="/assets/solar-panel.png" alt="Solar panels mounted beside a compact off-grid project area." loading="lazy"><figcaption><span>Panel layout</span><strong>Estimate the array size before choosing mounts or wire length.</strong></figcaption></figure></div></div></section><div class="planner-workbench" data-solar-planner><div class="planner-toolbar"><div><p class="eyebrow">Interactive build plan</p><h2>Load list, battery, panels, and parts in one place.</h2><p>Add the devices you want to run. The planner estimates daily energy, battery capacity, panel watts, and starter parts.</p></div><div class="planner-actions"><button type="button" class="button primary" data-action="add-load"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-plus"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Add load</button><button type="button" class="button" data-action="reset-plan"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-rotate-ccw"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>Reset</button></div></div><div class="preset-rail" aria-label="Project presets"><button type="button" class="preset-button" data-preset="backup"><span>Home backup</span><strong>Router, lights, laptop</strong></button><button type="button" class="preset-button" data-preset="weekend"><span>Weekend cabin</span><strong>Fridge, pump, lights</strong></button><button type="button" class="preset-button" data-preset="van"><span>Van kit</span><strong>Fan, fridge, devices</strong></button></div><div class="planner-grid"><section class="planner-table-panel" aria-label="Daily load planner"><div class="table-wrap"><table class="planner-table"><thead><tr><th>Device</th><th>Watts</th><th>Hours/day</th><th>Wh/day</th><th></th></tr></thead><tbody data-loads></tbody></table></div></section><aside class="planner-settings"><div class="field"><label for="planner-sun-hours">Peak sun hours</label><input id="planner-sun-hours" name="sunHours" type="number" min="0.5" step="0.1" value="4.5"></div><div class="field"><label for="planner-days">Days of autonomy</label><input id="planner-days" name="days" type="number" min="0.5" step="0.5" value="1.5"></div><div class="field"><label for="planner-dod">Usable battery percent</label><input id="planner-dod" name="dod" type="number" min="20" max="100" step="1" value="80"></div><div class="field"><label for="planner-loss">System loss percent</label><input id="planner-loss" name="loss" type="number" min="0" max="60" step="1" value="25"></div><div class="field"><label for="planner-voltage">Battery voltage</label><select id="planner-voltage" name="voltage"><option value="12">12 V</option><option value="24" selected>24 V</option><option value="48">48 V</option></select></div><div class="field"><label for="planner-budget">Parts tier</label><select id="planner-budget" name="budget"><option value="budget">Budget</option><option value="standard" selected>Standard</option><option value="premium">Premium</option></select></div><div class="field"><label for="planner-install-style">Install style</label><select id="planner-install-style" name="installStyle"><option value="portable">Portable kit</option><option value="fixed" selected>Fixed small system</option><option value="permanent">Permanent install</option></select></div></aside></div><div class="result-box planner-results" aria-live="polite"><div class="metric"><span>Daily energy</span><strong data-output="dailyWh">0 Wh</strong></div><div class="metric"><span>Battery target</span><strong data-output="batteryTarget">0 Wh</strong></div><div class="metric"><span>Panel target</span><strong data-output="panelTarget">0 W</strong></div><div class="metric"><span>Battery size</span><strong data-output="batteryAh">0 Ah</strong></div><div class="metric"><span>Controller</span><strong data-output="controllerAmps">0 A</strong></div><div class="metric"><span>Inverter idea</span><strong data-output="inverterTarget">0 W</strong></div><div class="metric"><span>Budget range</span><strong data-output="budgetRange">$0</strong></div><div class="metric"><span>Plan health</span><strong data-output="readinessScore">0%</strong><div class="status-meter" aria-hidden="true"><i data-meter="readiness"></i></div></div></div><div class="planner-summary"><div class="text-panel"><h3>Starter parts list</h3><ul data-output="partsList"></ul></div><div class="text-panel"><h3>Planning notes</h3><p data-output="planningNotes"></p><div class="planner-actions"><button type="button" class="button" data-action="copy-summary"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-clipboard"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>Copy summary</button><span class="tag" data-output="saveState">Saved locally</span></div></div></div><div class="planner-insights" aria-live="polite"><div class="insight-item"><span>Build profile</span><strong data-output="profileTag">Starter</strong></div><div class="insight-item"><span>Panel footprint</span><strong data-output="panelFootprint">0 sq ft</strong></div><div class="insight-item"><span>Recharge window</span><strong data-output="rechargeWindow">0 days</strong></div><div class="insight-item wide"><span>Next decision</span><strong data-output="nextDecision">Add loads to start sizing.</strong></div></div></div><script>
+  const planner = document.querySelector("[data-solar-planner]");
+  if (planner) {
+    const defaultLoads = [
+      { name: "LED lights", watts: 20, hours: 3 },
+      { name: "Router and camera", watts: 18, hours: 24 },
+      { name: "Laptop charging", watts: 65, hours: 2 }
+    ];
+    const presets = {
+      backup: {
+        loads: defaultLoads,
+        settings: { sunHours: 4.5, days: 1.5, dod: 80, loss: 25, voltage: 24, budget: "standard", installStyle: "fixed" }
+      },
+      weekend: {
+        loads: [
+          { name: "12V fridge", watts: 45, hours: 12 },
+          { name: "LED lights", watts: 30, hours: 4 },
+          { name: "Water pump", watts: 90, hours: 0.5 },
+          { name: "Phone and radio charging", watts: 35, hours: 3 }
+        ],
+        settings: { sunHours: 4, days: 2, dod: 80, loss: 28, voltage: 24, budget: "standard", installStyle: "fixed" }
+      },
+      van: {
+        loads: [
+          { name: "Vent fan", watts: 28, hours: 8 },
+          { name: "Portable fridge", watts: 40, hours: 10 },
+          { name: "Laptop and camera charging", watts: 75, hours: 2 },
+          { name: "Lights", watts: 15, hours: 4 }
+        ],
+        settings: { sunHours: 5, days: 1.5, dod: 80, loss: 22, voltage: 12, budget: "premium", installStyle: "portable" }
+      }
+    };
+    const storeKey = "solar-diy-project-planner-v1";
+    let loads = [];
+
+    const cloneLoads = (items) => items.map((item) => ({ ...item }));
+
+    const applySettings = (settings) => {
+      for (const [key, value] of Object.entries(settings || {})) {
+        const input = planner.querySelector(`[name="${key}"]`);
+        if (input) input.value = value;
+      }
+    };
+
+    const loadSaved = () => {
+      try {
+        const saved = JSON.parse(localStorage.getItem(storeKey) || "null");
+        loads = Array.isArray(saved?.loads) ? saved.loads : cloneLoads(defaultLoads);
+        applySettings(saved?.settings);
+      } catch {
+        loads = cloneLoads(defaultLoads);
+      }
+    };
+
+    const readNumber = (name) => Number(planner.querySelector(`[name="${name}"]`)?.value || 0);
+    const readValue = (name) => String(planner.querySelector(`[name="${name}"]`)?.value || "");
+    const fmt = (number, unit) => `${Math.round(number).toLocaleString()} ${unit}`;
+    const currency = (number) =>
+      new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(number);
+    const output = (key, value) => {
+      const target = planner.querySelector(`[data-output="${key}"]`);
+      if (target) target.textContent = value;
+    };
+    const setMeter = (key, value) => {
+      const meter = planner.querySelector(`[data-meter="${key}"]`);
+      if (meter) meter.style.width = `${Math.max(0, Math.min(100, value))}%`;
+    };
+
+    const save = () => {
+      const settings = {};
+      planner.querySelectorAll(".planner-settings input, .planner-settings select").forEach((input) => {
+        settings[input.name] = input.value;
+      });
+      localStorage.setItem(storeKey, JSON.stringify({ loads, settings }));
+      output("saveState", "Saved locally");
+    };
+
+    const escapeAttribute = (value) =>
+      String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;");
+
+    const renderLoads = () => {
+      const tbody = planner.querySelector("[data-loads]");
+      tbody.innerHTML = loads
+        .map(
+          (load, index) => `
+          <tr>
+            <td><input aria-label="Device name" data-index="${index}" data-field="name" value="${escapeAttribute(load.name)}" /></td>
+            <td><input aria-label="Watts" data-index="${index}" data-field="watts" type="number" min="0" step="1" value="${escapeAttribute(load.watts)}" /></td>
+            <td><input aria-label="Hours per day" data-index="${index}" data-field="hours" type="number" min="0" step="0.25" value="${escapeAttribute(load.hours)}" /></td>
+            <td><strong data-row-wh="${index}">${Math.round(Number(load.watts) * Number(load.hours)).toLocaleString()}</strong></td>
+            <td><button type="button" class="mini-button" data-remove="${index}" aria-label="Remove load">Remove</button></td>
+          </tr>`
+        )
+        .join("");
+    };
+
+    const updateRowWh = (index) => {
+      const cell = planner.querySelector(`[data-row-wh="${index}"]`);
+      if (cell) cell.textContent = Math.round(Number(loads[index].watts) * Number(loads[index].hours)).toLocaleString();
+    };
+
+    const calculate = () => {
+      const dailyWh = loads.reduce((sum, load) => sum + Math.max(0, Number(load.watts)) * Math.max(0, Number(load.hours)), 0);
+      const sunHours = Math.max(0.5, readNumber("sunHours"));
+      const days = Math.max(0.5, readNumber("days"));
+      const dod = Math.min(100, Math.max(20, readNumber("dod"))) / 100;
+      const lossFactor = 1 - Math.min(70, Math.max(0, readNumber("loss"))) / 100;
+      const voltage = Math.max(12, readNumber("voltage"));
+      const peakLoad = Math.max(...loads.map((load) => Number(load.watts) || 0), 0);
+      const batteryWh = dailyWh * days / dod;
+      const panelW = dailyWh / sunHours / lossFactor * 1.2;
+      const batteryAh = batteryWh / voltage;
+      const controllerA = panelW / voltage * 1.25;
+      const inverterW = peakLoad < 100 ? 300 : Math.ceil((peakLoad * 1.5) / 100) * 100;
+      const budgetTier = readValue("budget") || "standard";
+      const installStyle = readValue("installStyle") || "fixed";
+      const tierCosts = {
+        budget: { panel: 0.58, battery: 0.24, controller: 7.5, inverter: 0.12, base: 90 },
+        standard: { panel: 0.88, battery: 0.38, controller: 11, inverter: 0.18, base: 140 },
+        premium: { panel: 1.24, battery: 0.56, controller: 16, inverter: 0.26, base: 210 }
+      };
+      const styleMultiplier = installStyle === "portable" ? 1.08 : installStyle === "permanent" ? 1.32 : 1.18;
+      const cost = tierCosts[budgetTier] || tierCosts.standard;
+      const partsEstimate =
+        (panelW * cost.panel + batteryWh * cost.battery + controllerA * cost.controller + inverterW * cost.inverter + cost.base) *
+        styleMultiplier;
+      const readiness = Math.max(
+        35,
+        Math.min(
+          98,
+          58 +
+            (days >= 1.5 ? 10 : 3) +
+            (dod <= 80 ? 8 : 0) +
+            (readNumber("loss") >= 20 ? 8 : 0) +
+            (sunHours >= 4 ? 6 : 0) -
+            (dailyWh > 1800 ? 10 : 0) -
+            (controllerA > 60 ? 8 : 0) -
+            (peakLoad > 1200 ? 8 : 0)
+        )
+      );
+      const panelFootprint = panelW / 18;
+      const rechargeDays = batteryWh / Math.max(1, panelW * sunHours * lossFactor);
+      const profile =
+        dailyWh < 700 && inverterW <= 500
+          ? "Starter backup"
+          : dailyWh < 1600 && controllerA <= 50
+            ? "Balanced off-grid"
+            : "Review before buying";
+
+      output("dailyWh", fmt(dailyWh, "Wh"));
+      output("batteryTarget", fmt(batteryWh, "Wh"));
+      output("panelTarget", fmt(panelW, "W"));
+      output("batteryAh", `${Math.ceil(batteryAh)} Ah`);
+      output("controllerAmps", `${Math.ceil(controllerA)} A`);
+      output("inverterTarget", `${inverterW} W`);
+      output("budgetRange", `${currency(partsEstimate * 0.82)}-${currency(partsEstimate * 1.24)}`);
+      output("readinessScore", `${Math.round(readiness)}%`);
+      output("profileTag", profile);
+      output("panelFootprint", `${Math.ceil(panelFootprint)} sq ft`);
+      output("rechargeWindow", `${Math.max(0.5, rechargeDays).toFixed(1)} sunny days`);
+      setMeter("readiness", readiness);
+
+      const parts = [
+        `${Math.ceil(panelW / 100) * 100} W solar array target`,
+        `${voltage} V battery bank near ${Math.ceil(batteryAh)} Ah usable design target`,
+        `MPPT controller rated at least ${Math.ceil(controllerA)} A`,
+        `${inverterW} W pure sine inverter if AC loads are required`,
+        "Battery fuse, PV disconnect, wire, lugs, strain relief, and labels"
+      ];
+      planner.querySelector('[data-output="partsList"]').innerHTML = parts.map((part) => `<li>${part}</li>`).join("");
+      output(
+        "planningNotes",
+        dailyWh > 1500
+          ? "This is no longer a tiny system. Review wire size, battery current, mounting, ventilation, and local electrical rules before buying parts."
+          : "This looks like a small off-grid planning range. Keep wiring short, protect every battery-fed circuit, and leave reserve for cloudy weather."
+      );
+      output(
+        "nextDecision",
+        readiness < 72
+          ? "Increase autonomy or losses, then compare wire size and fuse ratings before purchase."
+          : panelW > 700
+            ? "Choose panel layout and controller voltage before shopping."
+            : "Confirm the real watt draw of your largest load before buying the inverter."
+      );
+      save();
+    };
+
+    planner.addEventListener("input", (event) => {
+      const target = event.target;
+      if (target.matches("[data-index]")) {
+        const index = Number(target.dataset.index);
+        const field = target.dataset.field;
+        loads[index][field] = field === "name" ? target.value : Number(target.value);
+        updateRowWh(index);
+      }
+      calculate();
+    });
+
+    planner.addEventListener("click", async (event) => {
+      const target = event.target;
+      if (target.matches('[data-action="add-load"]')) {
+        loads.push({ name: "New device", watts: 25, hours: 1 });
+        renderLoads();
+        calculate();
+      }
+      if (target.matches('[data-action="reset-plan"]')) {
+        loads = cloneLoads(defaultLoads);
+        renderLoads();
+        calculate();
+      }
+      if (target.matches("[data-preset]")) {
+        const preset = presets[target.dataset.preset];
+        if (preset) {
+          loads = cloneLoads(preset.loads);
+          applySettings(preset.settings);
+          planner.querySelectorAll("[data-preset]").forEach((button) => button.classList.toggle("active", button === target));
+          renderLoads();
+          calculate();
+        }
+      }
+      if (target.matches("[data-remove]")) {
+        loads.splice(Number(target.dataset.remove), 1);
+        if (loads.length === 0) loads.push({ name: "New device", watts: 10, hours: 1 });
+        renderLoads();
+        calculate();
+      }
+      if (target.matches('[data-action="copy-summary"]')) {
+        const summary = [
+          `Daily energy: ${planner.querySelector('[data-output="dailyWh"]')?.textContent}`,
+          `Battery target: ${planner.querySelector('[data-output="batteryTarget"]')?.textContent}`,
+          `Panel target: ${planner.querySelector('[data-output="panelTarget"]')?.textContent}`,
+          `Controller: ${planner.querySelector('[data-output="controllerAmps"]')?.textContent}`,
+          `Inverter idea: ${planner.querySelector('[data-output="inverterTarget"]')?.textContent}`,
+          `Budget range: ${planner.querySelector('[data-output="budgetRange"]')?.textContent}`,
+          `Plan health: ${planner.querySelector('[data-output="readinessScore"]')?.textContent}`
+        ].join("\n");
+        await navigator.clipboard?.writeText(summary);
+        output("saveState", "Copied");
+      }
+    });
+
+    loadSaved();
+    renderLoads();
+    calculate();
+  }
+</script></div></section></main><footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="/" aria-label="Solar DIY Project home"><span class="brand-mark" aria-hidden="true"></span><span>Solar DIY Project</span></a><p class="notice">Educational solar planning content. Electrical work can be dangerous; consult a qualified professional where code, permits, grid connections, roofs, or high-current batteries are involved.</p><p class="notice">(c) 2026 Solar DIY Project. All rights reserved.</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/editorial-policy/">Editorial Policy</a><a href="/privacy-policy/">Privacy</a><a href="/cookie-policy/">Cookies</a><a href="/terms/">Terms</a></nav></div></footer></div></body></html>
